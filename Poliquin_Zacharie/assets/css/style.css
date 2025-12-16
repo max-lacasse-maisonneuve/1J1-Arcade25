@@ -1,0 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+canvas {
+    cursor: url("../images/curseur/curseur.png"), auto;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+* {
+    background-image: url("../images/FondPrincipal/Fond_Couleur.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ 

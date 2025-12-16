@@ -1,0 +1,12 @@
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+canvas {
+    border: 1px solid lightblue;
+    cursor: url("../images/crayon.jpg")
+}

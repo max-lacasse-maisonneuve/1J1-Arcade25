@@ -1,0 +1,32 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: Book Antiqua;
+}
+
+
+
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+#startButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    background-color: #0000006f;
+    color: rgba(255, 255, 255, 0.637);
+    border: none;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+}

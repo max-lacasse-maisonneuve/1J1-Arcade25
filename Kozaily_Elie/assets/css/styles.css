@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Momo";
+    src: url("../fonts/MomoSignature-Regular.ttf") format("opentype");
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(128, 130, 243);
+
+}
+
+canvas {
+    border: 10px solid #000000;
+
+}
+

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "pixels";
+    src: url("../fonts/Stacked\ pixel.ttf");
+}
+
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+background-color: #5c7c91 ;
+}
+canvas {
+    border: 1px solid #add8e6;
+    background-color: #add8e6 #add8e65b ;
+}
