@@ -56,17 +56,18 @@ oImageJ.src = "assets/images/lettreJ.jpg";
 let lettreAléatoire;
 
 function initialiser() {
-    setInterval(boucleJeu, 1000 / 60);
+    setInterval(boucleJeu, 1000 / 120);
     oCanvasHTML.addEventListener("click", clicCanvas);
     oCanvasHTML.addEventListener("mousedown", appuyerBouton);
     oCanvasHTML.addEventListener("mouseup", relacherBouton);
     oCanvasHTML.addEventListener("mousemove", mouvementSouris);
     oCanvasHTML.addEventListener("dblclick", doubleClic);
-    oCanvasHTML.addEventListener("keydown", flecheDroite);
+    window.addEventListener("keyup", flecheDroite);
 }
 
 function boucleJeu() {
     if (sEtatJeu == "intro") {
+        oContexte.clearRect(0, 0, nLargeur, nHauteur);
         afficherIntro();
     } else if (sEtatJeu == "jeu") {
         afficherJeu();
@@ -89,12 +90,46 @@ function mouvementSouris(evenement) {
 
 function doubleClic() {
     oContexte.clearRect(0, 0, nLargeur, nHauteur);
+    dessinerLettre();
 }
 
 function flecheDroite(evenement) {
     let touche = evenement.key;
+    console.log(touche);
+
     if (touche == "ArrowRight") {
-        oContexte.drawImage(lettreAléatoire, 0, 0, nLargeur, nHauteur);
+        choisirLettre();
+    }
+}
+
+function choisirLettre() {
+    oContexte.clearRect(0, 0, nLargeur, nHauteur);
+
+    lettreAléatoire = Math.floor(Math.random() * 10) + 1;
+    dessinerLettre();
+}
+
+function dessinerLettre() {
+    if (lettreAléatoire === 1) {
+        oContexte.drawImage(oImageA, 0, 0, nLargeur, nHauteur);
+    } else if (lettreAléatoire === 2) {
+        oContexte.drawImage(oImageB, 0, 0, nLargeur, nHauteur);
+    } else if (lettreAléatoire === 3) {
+        oContexte.drawImage(oImageC, 0, 0, nLargeur, nHauteur);
+    } else if (lettreAléatoire === 4) {
+        oContexte.drawImage(oImageD, 0, 0, nLargeur, nHauteur);
+    } else if (lettreAléatoire === 5) {
+        oContexte.drawImage(oImageE, 0, 0, nLargeur, nHauteur);
+    } else if (lettreAléatoire === 6) {
+        oContexte.drawImage(oImageF, 0, 0, nLargeur, nHauteur);
+    } else if (lettreAléatoire === 7) {
+        oContexte.drawImage(oImageG, 0, 0, nLargeur, nHauteur);
+    } else if (lettreAléatoire === 8) {
+        oContexte.drawImage(oImageH, 0, 0, nLargeur, nHauteur);
+    } else if (lettreAléatoire === 9) {
+        oContexte.drawImage(oImageI, 0, 0, nLargeur, nHauteur);
+    } else {
+        oContexte.drawImage(oImageJ, 0, 0, nLargeur, nHauteur);
     }
 }
 
@@ -103,21 +138,21 @@ function clicCanvas(evenement) {
     let nPositionCurseurY = evenement.offsetY;
 
     if (sEtatJeu == "intro") {
-        oContexte.clearRect(0, 0, nLargeur, nHauteur);
         sEtatJeu = "jeu";
+        choisirLettre();
     } else if (sEtatJeu == "jeu") {
-        lettreAléatoire = Math.floor(Math.random() * 10) + 1;
-
-        let collision = false;
     }
 }
 
 function afficherIntro() {
     oContexte.drawImage(oImageBG, 0, 0, nLargeur, nHauteur);
-    oContexte.textAlign = "center";
-    oContexte.fillText(`LETTRE ET DESSIN`, 400, 350);
-    oContexte.fillText(`CLICKER POUR DÉMMARRER`, 400, 150);
     oContexte.font = "bold 35px Arial";
+    oContexte.textAlign = "center";
+    oContexte.fillText(`LETTRE ET DESSIN`, 400, 125);
+    oContexte.font = "bold 15px Arial";
+    oContexte.fillText(`CLIQUER POUR DÉMARRER`, 400, 175);
+    oContexte.fillText(`Appuyer sur la flèche de droite pour changer de lettre`, 400, 200);
+    oContexte.fillText(`Double-cliquer pour effacer`, 400, 225);
 
     nPositionXCrayon += 1;
     if (nPositionXCrayon > nLargeur) {
@@ -129,28 +164,8 @@ function afficherIntro() {
 
 function afficherJeu() {
     if (boutonAppuye == true) {
-        oContexte.fillRect(nPositionCurseurX, nPositionCursuerY, 5, 5);
-    }
-    if (lettreAléatoire === 1) {
-        oContexte.drawImage(oImageA, 0, 0, nHauteur, nHauteur);
-    } else if (lettreAléatoire === 2) {
-        oContexte.drawImage(oImageB, 0, 0, nLargeur, nHauteur);
-    } else if (lettreAléatoire === 3) {
-        oContexte.drawImage(oImageC, 0, 0, nHauteur, nHauteur);
-    } else if (lettreAléatoire === 4) {
-        oContexte.drawImage(oImageD, 0, 0, nLargeur, nHauteur);
-    } else if (lettreAléatoire === 5) {
-        oContexte.drawImage(oImageE, 0, 0, nHauteur, nHauteur);
-    } else if (lettreAléatoire === 6) {
-        oContexte.drawImage(oImageF, 0, 0, nLargeur, nHauteur);
-    } else if (lettreAléatoire === 7) {
-        oContexte.drawImage(oImageG, 0, 0, nHauteur, nHauteur);
-    } else if (lettreAléatoire === 8) {
-        oContexte.drawImage(oImageH, 0, 0, nLargeur, nHauteur);
-    } else if (lettreAléatoire === 9) {
-        oContexte.drawImage(oImageI, 0, 0, nHauteur, nHauteur);
-    } else {
-        oContexte.drawImage(oImageJ, 0, 0, nLargeur, nHauteur);
+        oContexte.fillStyle = "blue";
+        oContexte.fillRect(nPositionCurseurX, nPositionCursuerY, 15, 15);
     }
 }
 window.addEventListener("load", initialiser);
