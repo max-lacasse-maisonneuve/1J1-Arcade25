@@ -271,7 +271,7 @@ oTexteBubble1 = {
     hauteur: 500,
     largeur: 1000,
     image: new Image(),
-    src: "./assets/images/Texte/texte_bubble_1.png",
+    src: "./assets/images/texte/texte_bubble_1.png",
 };
 oTexteBubble1.image.src = oTexteBubble1.src;
 
@@ -281,7 +281,7 @@ oTexteBubble2 = {
     hauteur: 500,
     largeur: 1000,
     image: new Image(),
-    src: "./assets/images/Texte/texte_bubble_2.png",
+    src: "./assets/images/texte/texte_bubble_2.png",
 };
 oTexteBubble2.image.src = oTexteBubble2.src;
 
@@ -291,7 +291,7 @@ oTexteBubble3 = {
     hauteur: 500,
     largeur: 1000,
     image: new Image(),
-    src: "./assets/images/Texte/texte_bubble_3.png",
+    src: "./assets/images/texte/texte_bubble_3.png",
 };
 oTexteBubble3.image.src = oTexteBubble3.src;
 
@@ -378,7 +378,7 @@ oVie = {
     hauteur: 50,
     largeur: 100,
     image: new Image(),
-    src: "./assets/images/Texte/vie.png",
+    src: "./assets/images/texte/vie.png",
 };
 oVie.image.src = oVie.src;
 
