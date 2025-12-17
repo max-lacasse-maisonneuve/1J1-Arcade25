@@ -450,7 +450,7 @@ function boucleJeu() {
     } else if (sEtat == "jeu") {
         // fait 60 frames par secondes qui serviront a mettre une seconde
         nFrames++;
-        console.log(nFrames + " nframes");
+        // console.log(nFrames + " nframes");
         // gere les phases
         if (nTemps < 60) {
             oJoueur.phase = 1;
@@ -658,7 +658,7 @@ function gererLaser() {
                 //Trouver le
                 if (oLaserAleatoire.showLaser == true || oLaserAleatoire.couleur != "rouge") {
                     i--;
-                    console.log(oLaserAleatoire.alt, oLaserAleatoire.couleur, "pas pris");
+                    // console.log(oLaserAleatoire.alt, oLaserAleatoire.couleur, "pas pris");
 
                     continue;
                 } else {
@@ -778,7 +778,7 @@ function dessinerLaser() {
 
         gererLaser();
 
-        console.log("gererlaser devrait etre rappelé");
+        // console.log("gererlaser devrait etre rappelé");
     }
 }
 let sonFinJoue2;
