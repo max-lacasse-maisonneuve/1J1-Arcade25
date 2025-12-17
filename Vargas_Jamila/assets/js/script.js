@@ -158,7 +158,7 @@ let oMonstre1 = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/monstre/monstre_1.png",
+    src: "assets/images/monstre/monstre1.png",
 };
 oMonstre1.image.src = oMonstre1.src;
 let oMonstre2 = {
@@ -167,7 +167,7 @@ let oMonstre2 = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/monstre/monstre_2.png",
+    src: "assets/images/monstre/monstre2.png",
 };
 oMonstre2.image.src = oMonstre2.src;
 let oMonstre3 = {
@@ -176,7 +176,7 @@ let oMonstre3 = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/monstre/monstre_3.png",
+    src: "assets/images/monstre/monstre3.png",
 };
 oMonstre3.image.src = oMonstre3.src;
 
@@ -426,10 +426,10 @@ function DessinerIntro() {
     /*fond*/
     oContexte.drawImage(oFondDebut.image, oFondDebut.x, oFondDebut.y, nLargeurCanvas, nHauteurCanvas);
     /*personnage*/
-    oContexte.drawImage(oDragon.image, 300, -60, oDragon.largeur * 8, oDragon.hauteur * 8);
-    oContexte.drawImage(oPrincesse.image, 450, 320, oPrincesse.largeur * 4, oPrincesse.hauteur * 4);
+    oContexte.drawImage(oDragon.image, 300, -60, oDragon.largeur, oDragon.hauteur);
+    oContexte.drawImage(oPrincesse.image, 450, 320, oPrincesse.largeur, oPrincesse.hauteur);
     oPrincesse.image.src = oPrincesse.src;
-    oContexte.drawImage(oChevalier.image, 0, 300, oChevalier.largeur * 4, oChevalier.hauteur * 4);
+    oContexte.drawImage(oChevalier.image, 0, 300, oChevalier.largeur, oChevalier.hauteur);
     oChevalier.image.src = oChevalier.src;
 }
 function DessinerNuage() {

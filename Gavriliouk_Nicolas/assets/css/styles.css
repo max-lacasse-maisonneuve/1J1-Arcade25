@@ -1,13 +1,12 @@
 @font-face {
     font-family: "MorkDungeon";
-    src: url(../font/Mork\ Dungeon.ttf);
+    src: url(../font/MorkDungeon.ttf);
 }
 
 @font-face {
     font-family: "HerculesPixel";
     src: url(../font/HerculesPixelFontOutline-4nqgK.otf);
 }
-
 
 body {
     min-height: 100vh;
@@ -16,7 +15,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(29, 27, 22, 1);
-    
 }
 canvas {
     /* border: 1px solid lightblue; */
