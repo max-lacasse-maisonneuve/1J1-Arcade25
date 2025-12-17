@@ -129,8 +129,8 @@ let oPrincesse = {
     hauteur: 128,
     largeur: 128,
     image: new Image(),
-    src: "assets/images/perso/princessepeur.png",
-    srcestHeureux: "assets/images/perso/princesseheureuse.png",
+    src: "assets/images/perso/PrincessePeur.png",
+    srcestHeureux: "assets/images/perso/PrincesseHeureuse.png",
 };
 let oChevalier = {
     x: 0,
