@@ -129,8 +129,8 @@ let oPrincesse = {
     hauteur: 128,
     largeur: 128,
     image: new Image(),
-    src: "./assets/images/perso/PrincessePeur.png",
-    srcestHeureux: "./assets/images/perso/PrincesseHeureuse.png",
+    src: "./assets/images/perso/princessepeur.png",
+    srcestHeureux: "./assets/images/perso/princesseheureuse.png",
 };
 let oChevalier = {
     x: 0,
@@ -138,10 +138,10 @@ let oChevalier = {
     hauteur: 128,
     largeur: 128,
     image: new Image(),
-    src: "./assets/images/perso/Chevalierfache.png",
-    srcHeureux: "./assets/images/perso/ChevalierHeureux.png",
-    srcDos: "./assets/images/perso/ChevalierDos.png",
-    srcTriste: "./assets/images/perso/ChevalierTriste.png",
+    src: "./assets/images/perso/chevalierfache.png",
+    srcHeureux: "./assets/images/perso/chevalierheureux.png",
+    srcDos: "./assets/images/perso/chevalierdos.png",
+    srcTriste: "./assets/images/perso/chevaliertriste.png",
 };
 let oDragon = {
     x: 0,
@@ -149,7 +149,7 @@ let oDragon = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/monstre/Dragon.png",
+    src: "./assets/images/monstre/dragon.png",
 };
 oDragon.image.src = oDragon.src;
 let oMonstre1 = {
@@ -158,7 +158,7 @@ let oMonstre1 = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/monstre/Monstre_1.png",
+    src: "./assets/images/monstre/monstre_1.png",
 };
 oMonstre1.image.src = oMonstre1.src;
 let oMonstre2 = {
@@ -167,7 +167,7 @@ let oMonstre2 = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/monstre/Monstre_2.png",
+    src: "./assets/images/monstre/monstre_2.png",
 };
 oMonstre2.image.src = oMonstre2.src;
 let oMonstre3 = {
