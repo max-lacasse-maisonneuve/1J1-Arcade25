@@ -14,7 +14,7 @@ let oFondDebut = {
     hauteur: oCanvasHTML.height,
     largeur: oCanvasHTML.width,
     image: new Image(),
-    src: "assets/images/backgrounds/bg1.png",
+    src: "./assets/images/backgrounds/bg1.png",
 };
 oFondDebut.image.src = oFondDebut.src;
 let oNuage1 = {
@@ -24,7 +24,7 @@ let oNuage1 = {
     largeur: 500,
     vitesse: 1,
     image: new Image(),
-    src: "assets/images/backgrounds/nuage1.png",
+    src: "./assets/images/backgrounds/nuage1.png",
 };
 oNuage1.image.src = oNuage1.src;
 let oNuage2 = {
@@ -34,7 +34,7 @@ let oNuage2 = {
     largeur: 500,
     vitesse: 2,
     image: new Image(),
-    src: "assets/images/backgrounds/nuage2.png",
+    src: "./assets/images/backgrounds/nuage2.png",
 };
 oNuage2.image.src = oNuage2.src;
 
@@ -45,7 +45,7 @@ let oFondPorte = {
     hauteur: oCanvasHTML.height,
     largeur: oCanvasHTML.width,
     image: new Image(),
-    src: "assets/images/backgrounds/bg2.png",
+    src: "./assets/images/backgrounds/bg2.png",
 };
 oFondPorte.image.src = oFondPorte.src;
 let oPortefermer_1 = {
@@ -54,8 +54,8 @@ let oPortefermer_1 = {
     hauteur: 500,
     largeur: 1000,
     image: new Image(),
-    src: "assets/images/backgrounds/portefermer.png",
-    srcOuvert: "assets/images/backgrounds/porteouvert.png",
+    src: "./assets/images/backgrounds/portefermer.png",
+    srcOuvert: "./assets/images/backgrounds/porteouvert.png",
 };
 oPortefermer_1.image.src = oPortefermer_1.src;
 let oPortefermer_2 = {
@@ -64,8 +64,8 @@ let oPortefermer_2 = {
     hauteur: 500,
     largeur: 1000,
     image: new Image(),
-    src: "assets/images/backgrounds/portefermer.png",
-    srcOuvert: "assets/images/backgrounds/porteouvert.png",
+    src: "./assets/images/backgrounds/portefermer.png",
+    srcOuvert: "./assets/images/backgrounds/porteouvert.png",
 };
 oPortefermer_2.image.src = oPortefermer_2.src;
 let oPortefermer_3 = {
@@ -74,8 +74,8 @@ let oPortefermer_3 = {
     hauteur: 500,
     largeur: 1000,
     image: new Image(),
-    src: "assets/images/backgrounds/portefermer.png",
-    srcOuvert: "assets/images/backgrounds/porteouvert.png",
+    src: "./assets/images/backgrounds/portefermer.png",
+    srcOuvert: "./assets/images/backgrounds/porteouvert.png",
 };
 oPortefermer_3.image.src = oPortefermer_3.src;
 
@@ -86,7 +86,7 @@ let oFondBoss = {
     hauteur: oCanvasHTML.height,
     largeur: oCanvasHTML.width,
     image: new Image(),
-    src: "assets/images/backgrounds/bg3.png",
+    src: "./assets/images/backgrounds/bg3.png",
 };
 oFondBoss.image.src = oFondBoss.src;
 
@@ -97,7 +97,7 @@ let oFondBravo = {
     hauteur: oCanvasHTML.height,
     largeur: oCanvasHTML.width,
     image: new Image(),
-    src: "assets/images/backgrounds/bg4.png",
+    src: "./assets/images/backgrounds/bg4.png",
 };
 oFondBravo.image.src = oFondBravo.src;
 let oBallon_1 = {
@@ -107,7 +107,7 @@ let oBallon_1 = {
     largeur: 500,
     vitesse: 2,
     image: new Image(),
-    src: "assets/images/backgrounds/Ballon.png",
+    src: "./assets/images/backgrounds/Ballon.png",
 };
 oBallon_1.image.src = oBallon_1.src;
 let oBallon_2 = {
@@ -117,7 +117,7 @@ let oBallon_2 = {
     largeur: 500,
     vitesse: 1,
     image: new Image(),
-    src: "assets/images/backgrounds/Ballon.png",
+    src: "./assets/images/backgrounds/Ballon.png",
 };
 oBallon_2.image.src = oBallon_2.src;
 
@@ -129,8 +129,8 @@ let oPrincesse = {
     hauteur: 128,
     largeur: 128,
     image: new Image(),
-    src: "assets/images/perso/PrincessePeur.png",
-    srcestHeureux: "assets/images/perso/PrincesseHeureuse.png",
+    src: "./assets/images/perso/PrincessePeur.png",
+    srcestHeureux: "./assets/images/perso/PrincesseHeureuse.png",
 };
 let oChevalier = {
     x: 0,
@@ -138,10 +138,10 @@ let oChevalier = {
     hauteur: 128,
     largeur: 128,
     image: new Image(),
-    src: "assets/images/perso/Chevalierfache.png",
-    srcHeureux: "assets/images/perso/ChevalierHeureux.png",
-    srcDos: "assets/images/perso/ChevalierDos.png",
-    srcTriste: "assets/images/perso/ChevalierTriste.png",
+    src: "./assets/images/perso/Chevalierfache.png",
+    srcHeureux: "./assets/images/perso/ChevalierHeureux.png",
+    srcDos: "./assets/images/perso/ChevalierDos.png",
+    srcTriste: "./assets/images/perso/ChevalierTriste.png",
 };
 let oDragon = {
     x: 0,
@@ -149,7 +149,7 @@ let oDragon = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/monstre/Dragon.png",
+    src: "./assets/images/monstre/Dragon.png",
 };
 oDragon.image.src = oDragon.src;
 let oMonstre1 = {
@@ -158,7 +158,7 @@ let oMonstre1 = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/monstre/Monstre_1.png",
+    src: "./assets/images/monstre/Monstre_1.png",
 };
 oMonstre1.image.src = oMonstre1.src;
 let oMonstre2 = {
@@ -167,7 +167,7 @@ let oMonstre2 = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/monstre/Monstre_2.png",
+    src: "./assets/images/monstre/Monstre_2.png",
 };
 oMonstre2.image.src = oMonstre2.src;
 let oMonstre3 = {
@@ -176,7 +176,7 @@ let oMonstre3 = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/monstre/Monstre_3.png",
+    src: "./assets/images/monstre/Monstre_3.png",
 };
 oMonstre3.image.src = oMonstre3.src;
 
@@ -188,7 +188,7 @@ let Mchiffre_un = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/Monstrechiffre/Mchiffre_un.png",
+    src: "./assets/images/Monstrechiffre/Mchiffre_un.png",
 };
 Mchiffre_un.image.src = Mchiffre_un.src;
 let Mchiffre_deux = {
@@ -197,7 +197,7 @@ let Mchiffre_deux = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/Monstrechiffre/Mchiffre_deux.png",
+    src: "./assets/images/Monstrechiffre/Mchiffre_deux.png",
 };
 Mchiffre_deux.image.src = Mchiffre_deux.src;
 let Mchiffre_trois = {
@@ -206,7 +206,7 @@ let Mchiffre_trois = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/Monstrechiffre/Mchiffre_trois.png",
+    src: "./assets/images/Monstrechiffre/Mchiffre_trois.png",
 };
 Mchiffre_trois.image.src = Mchiffre_trois.src;
 let Mchiffre_quatre = {
@@ -215,7 +215,7 @@ let Mchiffre_quatre = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/Monstrechiffre/Mchiffre_quatre.png",
+    src: "./assets/images/Monstrechiffre/Mchiffre_quatre.png",
 };
 Mchiffre_quatre.image.src = Mchiffre_quatre.src;
 let Mchiffre_cinq = {
@@ -224,7 +224,7 @@ let Mchiffre_cinq = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/Monstrechiffre/Mchiffre_cinq.png",
+    src: "./assets/images/Monstrechiffre/Mchiffre_cinq.png",
 };
 Mchiffre_cinq.image.src = Mchiffre_cinq.src;
 let Mchiffre_six = {
@@ -233,7 +233,7 @@ let Mchiffre_six = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/Monstrechiffre/Mchiffre_six.png",
+    src: "./assets/images/Monstrechiffre/Mchiffre_six.png",
 };
 Mchiffre_six.image.src = Mchiffre_six.src;
 let Mchiffre_sept = {
@@ -242,7 +242,7 @@ let Mchiffre_sept = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/Monstrechiffre/Mchiffre_sept.png",
+    src: "./assets/images/Monstrechiffre/Mchiffre_sept.png",
 };
 Mchiffre_sept.image.src = Mchiffre_sept.src;
 let Mchiffre_huit = {
@@ -251,7 +251,7 @@ let Mchiffre_huit = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/Monstrechiffre/Mchiffre_huit.png",
+    src: "./assets/images/Monstrechiffre/Mchiffre_huit.png",
 };
 Mchiffre_huit.image.src = Mchiffre_huit.src;
 let Mchiffre_neuf = {
@@ -260,7 +260,7 @@ let Mchiffre_neuf = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "assets/images/Monstrechiffre/Mchiffre_neuf.png",
+    src: "./assets/images/Monstrechiffre/Mchiffre_neuf.png",
 };
 Mchiffre_neuf.image.src = Mchiffre_neuf.src;
 
@@ -271,7 +271,7 @@ oTexteBubble1 = {
     hauteur: 500,
     largeur: 1000,
     image: new Image(),
-    src: "assets/images/Texte/texte_bubble_1.png",
+    src: "./assets/images/Texte/texte_bubble_1.png",
 };
 oTexteBubble1.image.src = oTexteBubble1.src;
 
@@ -281,7 +281,7 @@ oTexteBubble2 = {
     hauteur: 500,
     largeur: 1000,
     image: new Image(),
-    src: "assets/images/Texte/texte_bubble_2.png",
+    src: "./assets/images/Texte/texte_bubble_2.png",
 };
 oTexteBubble2.image.src = oTexteBubble2.src;
 
@@ -291,7 +291,7 @@ oTexteBubble3 = {
     hauteur: 500,
     largeur: 1000,
     image: new Image(),
-    src: "assets/images/Texte/texte_bubble_3.png",
+    src: "./assets/images/Texte/texte_bubble_3.png",
 };
 oTexteBubble3.image.src = oTexteBubble3.src;
 
@@ -299,23 +299,23 @@ oTexteBubble3.image.src = oTexteBubble3.src;
 
 /*music jeuporte*/
 let MJeuPorte = {
-    son: new Audio("assets/audio/mporte.wav"),
+    son: new Audio("./assets/audio/mporte.wav"),
 };
 MJeuPorte.son.loop = true;
 /*music jeuboss*/
 let MBoss = {
-    son: new Audio("assets/audio/mboss.wav"),
+    son: new Audio("./assets/audio/mboss.wav"),
 };
 MBoss.son.loop = true;
 MBoss.son.volume = 0.2;
 /*music bravo*/
 let MBravo = {
-    son: new Audio("assets/audio/mbravo.mp3"),
+    son: new Audio("./assets/audio/mbravo.mp3"),
 };
 MBravo.son.volume = 0.2;
 /*music defaite*/
 let MDefaite = {
-    son: new Audio("assets/audio/mdefaite.wav"),
+    son: new Audio("./assets/audio/mdefaite.wav"),
 };
 
 //===========QUESTION
@@ -378,7 +378,7 @@ oVie = {
     hauteur: 50,
     largeur: 100,
     image: new Image(),
-    src: "assets/images/Texte/vie.png",
+    src: "./assets/images/Texte/vie.png",
 };
 oVie.image.src = oVie.src;
 
