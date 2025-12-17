@@ -76,7 +76,7 @@ let oJoueur = {
     phase3: false,
     image: new Image(),
     src: "assets/images/block.jpg",
-    srcblesse: "assets/images/blockblesse.png"
+    srcblesse: "assets/images/blockblesse.png",
 };
 oJoueur.image.src = oJoueur.src;
 
@@ -155,7 +155,7 @@ let olazerList = [
         couleur: "rouge",
         alt: "droite vertical",
         image: new Image(),
-        src: "assets/images/Lazerbeam2_vertical.png",
+        src: "assets/images/lazerbeam2_vertical.png",
     },
     {
         showLaser: false,
@@ -223,7 +223,7 @@ let olazerList = [
         couleur: "jaune",
         alt: "droite vertical",
         image: new Image(),
-        src: "assets/images/Lazerbeam2jaune_vertical.png",
+        src: "assets/images/lazerbeam2jaune_vertical.png",
     },
     {
         showLaser: false,
@@ -291,7 +291,7 @@ let olazerList = [
         couleur: "bleu",
         alt: "droite vertical",
         image: new Image(),
-        src: "assets/images/Lazerbeam2bleu_vertical.png",
+        src: "assets/images/lazerbeam2bleu_vertical.png",
     },
 ];
 // ce olazer ne sert que pour son showlazer:true qui réassigne de nouveaux lazers selon leurs phase et qui le remet a false apres.
@@ -321,15 +321,13 @@ let nTemps = 0;
 let olazeri2cooldown = 0;
 // ==== Musique et sons ====
 
-
 let oSFX = {
     son: new Audio("assets/audio/explosion.flac"),
     explosion: "assets/audio/explosion.flac",
     findebut: new Audio("assets/audio/death2.mp3"),
-    
+
     degat: "assets/audio/laser-weld-103309.mp3",
     mort: "assets/audio/explosion.flac",
-
 };
 
 // ==== Initialisation ====
@@ -346,13 +344,12 @@ function onClicCanvas(evenement) {
     let curseurY = evenement.offsetY;
 
     if (sEtat == "jeu") {
-        
     } else if (sEtat == "fin") {
         sEtat = "jeu";
     }
     if (sEtat == "intro" && detecterClicObjet(curseurX, curseurY, oBoutonDemarrer) == true) {
         sEtat = "jeu";
-        musique.play(); 
+        musique.play();
         gererLaser();
     }
     // bouton pour restart le jeu ne marche pas
@@ -360,8 +357,7 @@ function onClicCanvas(evenement) {
     //     console.log("bouton cliqué");
     //     sEtat = "intro";
     //     resetJeu();
-        
-        
+
     // }
     if (sEtat == "gagne") {
         gagnejeu();
@@ -383,11 +379,11 @@ function onToucheEnfoncee(evenement) {
 }
 
 function onToucheRelachee(evenement) {
-    if (evenement.key === "ArrowLeft") touches.ArrowLeft = false ;
+    if (evenement.key === "ArrowLeft") touches.ArrowLeft = false;
     if (evenement.key === "ArrowRight") touches.ArrowRight = false;
     if (evenement.key === "ArrowUp") touches.ArrowUp = false;
     if (evenement.key === "ArrowDown") touches.ArrowDown = false;
-    
+
     touches.toucheChoisie = null;
 }
 
@@ -432,18 +428,14 @@ let nLargeurVie;
 let nBarre;
 let nTempsrestant = 180;
 // musiques intro
-let musiques = [
-    "assets/audio/gamemusic1.mp3",
-    "assets/audio/music2.mp3",
-    "assets/audio/gamemusic1.mp3",
-];
+let musiques = ["assets/audio/gamemusic1.mp3", "assets/audio/music2.mp3", "assets/audio/gamemusic1.mp3"];
 let musiqueIndex = 0;
 let musique = new Audio(musiques[musiqueIndex]);
 //code trouvé sur le web pour de nouvelles musiques une fois la dernière terminée (par le copilot intégré de microsoft edge(oui jutilise brave et edge) )
-    musique.addEventListener("ended", () => {
+musique.addEventListener("ended", () => {
     musiqueIndex = (musiqueIndex + 1) % musiques.length;
     musique.src = musiques[musiqueIndex];
-    musique.load();          //jai du mettre ca car brave netait pas capable de jouer une musique lune apres lautre (donc load a chaque fois)
+    musique.load(); //jai du mettre ca car brave netait pas capable de jouer une musique lune apres lautre (donc load a chaque fois)
     musique.play();
 });
 
@@ -455,30 +447,25 @@ function boucleJeu() {
     if (sEtat == "intro") {
         afficherIntro();
         // code trouve sur le web qui gere laudio
-        
-
     } else if (sEtat == "jeu") {
         // fait 60 frames par secondes qui serviront a mettre une seconde
         nFrames++;
         console.log(nFrames + " nframes");
         // gere les phases
         if (nTemps < 60) {
-        oJoueur.phase = 1;
+            oJoueur.phase = 1;
         } else if (nTemps < 120) {
-           oJoueur.phase = 2;
+            oJoueur.phase = 2;
         } else {
             oJoueur.phase = 3;
         }
-        
 
         if (nFrames >= 60) {
-        nFrames = 0;
-        nTemps++;
-        nTempsrestant--;
-        
+            nFrames = 0;
+            nTemps++;
+            nTempsrestant--;
         }
 
-        
         gererSaut();
         dessinerFond();
         dessinerLaser();
@@ -492,18 +479,15 @@ function boucleJeu() {
         gagnejeu();
     }
     if (nTempsrestant <= 0) {
-            nTempsrestant = 0;
-            sEtat = 'gagne'
-        }
-    
+        nTempsrestant = 0;
+        sEtat = "gagne";
+    }
+
     // active la fin du jeu si
 }
 
-
-
 // fait vibrer le joueur quand il se prend des degats
 function animationDegat() {
-
     setTimeout(() => {
         oJoueur.x += 4;
         oJoueur.y += 4;
@@ -512,12 +496,6 @@ function animationDegat() {
         oJoueur.x -= 4;
         oJoueur.y -= 4;
     }, 200);
-    
-
-
-    
-
-
 }
 // ==== Dessins du fond du jeu qui bouge====
 function dessinerFond() {
@@ -551,37 +529,31 @@ function dessinerJoueur() {
 
 function dessinerUI() {
     // pour ne pas que le rectangle soit dans le negatif
-    
+
     // conteneur de barre de vie
     nLargeurVie = (oJoueur.vie / viemax) * nLargeurVieMax;
     oContexte.fillStyle = "rgba(255, 255, 255, 0.38)";
     oContexte.fillRect(155, 0, 200, 27);
     // barre de vie
-    oContexte.fillStyle = "blue"
+    oContexte.fillStyle = "blue";
     oContexte.fillRect(160, 3, nLargeurVie, 20);
     if (nLargeurVie <= 0) {
         nLargeurVie = 0;
-    }   
+    }
 
     // montrer le temps restant
 
     oContexte.fillStyle = "rgba(255, 255, 255, 0.38)";
 
     //text, x, y, [maxWidth])
-    oContexte.fillText("Temps restant: " + nTempsrestant,250, 50);
+    oContexte.fillText("Temps restant: " + nTempsrestant, 250, 50);
 }
 
-
-
-
-
 let enDegat = false;
-
 
 function gererDommage() {
     // variable globale pour savoir si le joueur touche a un lazer qui est dangeureux (qui lui fait des degats possiblement)
     let toucheLaserDangereux = false;
-    
 
     if (touches.ArrowLeft == false && touches.ArrowUp == false && touches.ArrowRight == false && touches.ArrowDown == false) {
         oJoueur.fixe = true;
@@ -603,7 +575,6 @@ function gererDommage() {
         }
         if (detecterCollision(oJoueur, olazeri2) == false) {
             continue;
-            
         }
 
         let laserDangereux = false;
@@ -632,31 +603,28 @@ function gererDommage() {
                 oJoueur.vie -= 0.25;
             }
         }
-
-
     }
     // SI LE JOUEUR TOUCHE LE LAZER ET QUIL CORRESPOND AU DANGER DU LAZER (BOUGE / NE BOUGE PAS) ALORS
     // IL PERDRA DES VIES
-    
+
     if (toucheLaserDangereux == true && enDegat == false) {
         oSFX.degat.loop = true;
-        oSFX.son.src = oSFX.degat
+        oSFX.son.src = oSFX.degat;
         oSFX.son.play();
         enDegat = true;
-        oJoueur.image.src = oJoueur.srcblesse
+        oJoueur.image.src = oJoueur.srcblesse;
     }
 
-    if (toucheLaserDangereux == false&& enDegat == true) {
+    if (toucheLaserDangereux == false && enDegat == true) {
         oSFX.son.pause();
         oSFX.son.currentTime = 0;
         enDegat = false;
-        oJoueur.image.src = oJoueur.src
+        oJoueur.image.src = oJoueur.src;
     }
     // SI LE JOUEUR NA PLUS DE VIE, ALORS METTRE SETAT A FIN
     if (oJoueur.vie <= 0) {
-        sEtat = "fin"
+        sEtat = "fin";
     }
-
 }
 
 function gererLaser() {
@@ -675,7 +643,6 @@ function gererLaser() {
         // variables pour reccomencer les lazers SEULEMENT s'ils sont tous sortis
         oLaser.nLaserSortis = 0;
         oLaser.sLaserFini = 0;
-
 
         // Filtre les lazers dépendant de leurs couleurs et facultés
         for (let i = 0; i < olazerList.length; i++) {
@@ -697,7 +664,7 @@ function gererLaser() {
                 } else {
                     oLaser.nLaserSortis += 1;
                     oLaserAleatoire.showLaser = true;
-                    
+
                     oLaserAleatoire.vitesse = Number(Math.floor(Math.random() * 4.6) + 1);
                 }
             }
@@ -719,7 +686,6 @@ function gererLaser() {
                     } else {
                         oLaserAleatoire.vitesse = Number(Math.floor(Math.random() * 5) + 1);
                     }
-                    
                 }
             }
         }
@@ -737,7 +703,6 @@ function gererLaser() {
                     oLaserAleatoire.showLaser = true;
                     if (oLaserAleatoire.couleur == "rouge") {
                         oLaserAleatoire.vitesse = Number(Math.floor(Math.random() * 6) + 1);
-                    
                     } else {
                         oLaserAleatoire.vitesse = Number(Math.floor(Math.random() * 5) + 1);
                     }
@@ -810,8 +775,6 @@ function dessinerLaser() {
         oLaser.sLaserFini = 0;
         oLaser.nLaserSortis = 0;
         oLaser.showLaser = false; // permet de réactiver la boucle gérerlazer (processus de deux verifications)
-        
-        
 
         gererLaser();
 
@@ -822,30 +785,29 @@ let sonFinJoue2;
 function gagnejeu() {
     oLaser.showLaser == false;
     oContexte.drawImage(oDecorMenu.image, oDecorMenu.x, oDecorMenu.y, oDecorMenu.largeur, oDecorMenu.hauteur);
-    oFond.image.src = 'assets/images/gagnerbackround.webp'
-    
+    oFond.image.src = "assets/images/gagnerbackround.webp";
+
     oFond.vitesse = 0;
 
     dessinerFond();
     if (sonFinJoue2 == false) {
-    musique.pause();
-    musique.currentTime = 0;
+        musique.pause();
+        musique.currentTime = 0;
 
-    oSFX.son.pause();
-    oSFX.findebut.currentTime = 0;
-    oSFX.findebut.src = "assets/audio/boss-attack-charge-384924.mp3"
-    oSFX.findebut.play();
+        oSFX.son.pause();
+        oSFX.findebut.currentTime = 0;
+        oSFX.findebut.src = "assets/audio/boss-attack-charge-384924.mp3";
+        oSFX.findebut.play();
 
-    sonFinJoue2 = true;
-}
+        sonFinJoue2 = true;
+    }
     oContexte.font = "80px Impact";
     oContexte.textAlign = "center";
     oContexte.fillStyle = "white";
     oContexte.fillText(`Tu as gagné !`, nLargeurCanvas / 2, nHauteurCanvas / 2);
     oContexte.font = "30px Nasalization";
-     oContexte.fillStyle = "white";
+    oContexte.fillStyle = "white";
     oContexte.fillText(`Tu as survécu 3 minutes`, nLargeurCanvas / 2, nHauteurCanvas / 2 + 60);
-
 }
 function afficherIntro() {
     oBoutonDemarrer.teinte++;
@@ -900,34 +862,33 @@ function afficherIntro() {
     oContexte.font = "20px Impact";
     oContexte.fillText("FLÈCHES pour BOUGER", nLargeurCanvas / 2, 250);
     oContexte.fillText("ESPACE pour SAUTER", nLargeurCanvas / 2, 300);
-    
 }
 let sonFinJoue = false;
 
 // ==== Fin du jeu ====
 function afficherFin() {
     oContexte.drawImage(oDecorMenu.image, oDecorMenu.x, oDecorMenu.y, oDecorMenu.largeur, oDecorMenu.hauteur);
-    oFond.image.src = 'assets/images/bg3.png'
-    oSFX
+    oFond.image.src = "assets/images/bg3.png";
+    oSFX;
     oFond.vitesse = 0.2;
-    
+
     dessinerFond();
     if (sonFinJoue == false) {
-    musique.pause();
-    musique.currentTime = 0;
+        musique.pause();
+        musique.currentTime = 0;
 
-    oSFX.son.pause();
-    oSFX.findebut.currentTime = 0;
-    oSFX.findebut.play();
+        oSFX.son.pause();
+        oSFX.findebut.currentTime = 0;
+        oSFX.findebut.play();
 
-    sonFinJoue = true;
-}
+        sonFinJoue = true;
+    }
     oContexte.font = "80px Impact";
     oContexte.textAlign = "center";
     oContexte.fillStyle = "red";
     oContexte.fillText(`Vous Êtes Mort`, nLargeurCanvas / 2, nHauteurCanvas / 2);
     oContexte.font = "30px Nasalization";
-     oContexte.fillStyle = "white";
+    oContexte.fillStyle = "white";
     oContexte.fillText(`Temps restant: ${nTempsrestant}`, nLargeurCanvas / 2, nHauteurCanvas / 2 + 60);
 
     // ne marche pas car le bouton narrive pas a senclencher quand on clique dessus
@@ -943,10 +904,6 @@ function afficherFin() {
     //     oBoutonDemarrer.x + oBoutonDemarrer.largeur / 2,
     //     oBoutonDemarrer.y + oBoutonDemarrer.hauteur / 2 + 8
     // );
-    
-    
-
-
 }
 // function resetJeu() {
 //     // reset letat jeu
