@@ -176,7 +176,7 @@ let oMonstre3 = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/monstre/Monstre_3.png",
+    src: "./assets/images/monstre/monstre_3.png",
 };
 oMonstre3.image.src = oMonstre3.src;
 
@@ -188,7 +188,7 @@ let Mchiffre_un = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/Monstrechiffre/Mchiffre_un.png",
+    src: "./assets/images/monstrechiffre/mchiffre_un.png",
 };
 Mchiffre_un.image.src = Mchiffre_un.src;
 let Mchiffre_deux = {
@@ -197,7 +197,7 @@ let Mchiffre_deux = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/Monstrechiffre/Mchiffre_deux.png",
+    src: "./assets/images/monstrechiffre/mchiffre_deux.png",
 };
 Mchiffre_deux.image.src = Mchiffre_deux.src;
 let Mchiffre_trois = {
@@ -206,7 +206,7 @@ let Mchiffre_trois = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/Monstrechiffre/Mchiffre_trois.png",
+    src: "./assets/images/monstrechiffre/mchiffre_trois.png",
 };
 Mchiffre_trois.image.src = Mchiffre_trois.src;
 let Mchiffre_quatre = {
@@ -215,7 +215,7 @@ let Mchiffre_quatre = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/Monstrechiffre/Mchiffre_quatre.png",
+    src: "./assets/images/monstrechiffre/mchiffre_quatre.png",
 };
 Mchiffre_quatre.image.src = Mchiffre_quatre.src;
 let Mchiffre_cinq = {
@@ -224,7 +224,7 @@ let Mchiffre_cinq = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/Monstrechiffre/Mchiffre_cinq.png",
+    src: "./assets/images/monstrechiffre/mchiffre_cinq.png",
 };
 Mchiffre_cinq.image.src = Mchiffre_cinq.src;
 let Mchiffre_six = {
@@ -233,7 +233,7 @@ let Mchiffre_six = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/Monstrechiffre/Mchiffre_six.png",
+    src: "./assets/images/monstrechiffre/mchiffre_six.png",
 };
 Mchiffre_six.image.src = Mchiffre_six.src;
 let Mchiffre_sept = {
@@ -242,7 +242,7 @@ let Mchiffre_sept = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/Monstrechiffre/Mchiffre_sept.png",
+    src: "./assets/images/monstrechiffre/mchiffre_sept.png",
 };
 Mchiffre_sept.image.src = Mchiffre_sept.src;
 let Mchiffre_huit = {
@@ -251,7 +251,7 @@ let Mchiffre_huit = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/Monstrechiffre/Mchiffre_huit.png",
+    src: "./assets/images/monstrechiffre/mchiffre_huit.png",
 };
 Mchiffre_huit.image.src = Mchiffre_huit.src;
 let Mchiffre_neuf = {
@@ -260,7 +260,7 @@ let Mchiffre_neuf = {
     hauteur: 150,
     largeur: 150,
     image: new Image(),
-    src: "./assets/images/Monstrechiffre/Mchiffre_neuf.png",
+    src: "./assets/images/monstrechiffre/mchiffre_neuf.png",
 };
 Mchiffre_neuf.image.src = Mchiffre_neuf.src;
 
