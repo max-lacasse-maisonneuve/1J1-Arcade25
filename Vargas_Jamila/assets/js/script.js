@@ -24,7 +24,7 @@ let oNuage1 = {
     largeur: 500,
     vitesse: 1,
     image: new Image(),
-    src: "assets/images/backgrounds/nuage_1.png",
+    src: "assets/images/backgrounds/nuage1.png",
 };
 oNuage1.image.src = oNuage1.src;
 let oNuage2 = {
@@ -34,7 +34,7 @@ let oNuage2 = {
     largeur: 500,
     vitesse: 2,
     image: new Image(),
-    src: "assets/images/backgrounds/nuage_2.png",
+    src: "assets/images/backgrounds/nuage2.png",
 };
 oNuage2.image.src = oNuage2.src;
 
