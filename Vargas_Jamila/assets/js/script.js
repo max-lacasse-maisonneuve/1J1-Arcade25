@@ -807,4 +807,5 @@ function detecterClicObjet(curseurX, curseurY, zone) {
     }
     return false;
 }
-window.addEventListener("load", initialiser);
+window.addEventListener("DOMContentLoaded", initialiser);
+// window.addEventListener("load", initialiser);
