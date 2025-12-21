@@ -1,0 +1,43 @@
+@font-face{
+    font-family: "botak";
+    src: url("../font/botak.ttf")
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffbfdd;
+}
+
+canvas{
+    border: 10px dashed #d55576;
+    border-radius: 5%;
+}
+
+section{
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'botak';
+    font-size: 50px;
+}
+
+.timerTrois{
+color: black;
+}
+
+.oBoutonDemarrer{
+ transform: scale(1);
+}
+
+.oBoutonDemarrer:hover{
+     transition: transform 0.5s;
+    transform: scale(1.12);
+}
