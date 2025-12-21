@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "SuperJoyful";
+  src: url("../fonts/Super\ Joyful.ttf") format("opentype");
+}
+
+@font-face {
+  /* TITRE */
+  font-family: "SuperKindly";
+  src: url("../fonts/Super\ Kindly.ttf") format("opentype");
+}
+
+@font-face {
+  /* COMPAGNON PARLER */
+  font-family: "HomerSimpson";
+  src: url("../fonts/Homer_Simpson_Revised.ttf") format("opentype");
+}
+
+@font-face {
+  /* COMPAGNON BRUIT */
+  font-family: "KomikaTitle";
+  src: url("../fonts/KOMTIT__.ttf") format("opentype");
+}
+
+@font-face {
+  /* SOUS- TITRE */
+  font-family: "CantedFX";
+  src: url("../fonts/CantedFX\ Bold.otf") format("opentype");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #03020e;
+}
+
+canvas {
+  border: 1px solid #003da7;
+  background-color: #000;
+}

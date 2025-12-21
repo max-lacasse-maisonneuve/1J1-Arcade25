@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "dum";
+    src: url("../font/dum1wide.ttf") format("truetype");
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: hsl(0, 0%, 0%);
+}
+
+canvas {
+    border: 1px solid hsl(256, 100%, 56%);
+    background-color: #000000;
+}

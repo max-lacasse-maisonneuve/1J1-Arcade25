@@ -1,0 +1,129 @@
+jeu volet-1
+
+//////VARIABLES
+
+CANVAS = élément canvas du HTML
+CONTEXTE = contexte 2D du canvas
+HAUTEURCANVAS = hauteur du canvas
+LARGEURCANVAS = largeur du canvas
+
+ETAT = "intro" 
+POINTS = 0 
+TEMPS_PASSE = 0;
+MINUTERIE = 60sec; 
+LISTE_QUESTIONS = environ 12 questions [liste de questions
+    {
+        nom:"",
+        reponse:"",
+        choix:["ch1","ch2","ch3",...],
+        points: 1,
+    },
+    {
+        nom:"",
+        reponse:"",
+        choix:["ch1","ch2","ch3",...],
+        points: 1,
+    },
+];
+
+INDEX_QUIZ = 0  
+BOUTON_DEMARRER = objet contenant : - position x, y - largeur, hauteur - texte - teinte (pour animation de couleur)
+
+
+##FUNCTIONS PRINCIPALES 
+
+/////FUNCTION INITIALISER LE JEU
+
+    FONCTION initialiser()
+        Démarrer le jeu à 60 FPS
+        ajouter un écouteur des evenements (les clics) sur le canva 
+    FIN FONCTION
+
+/////BOUCLE DE JEU
+
+    FONCTION boucleJeu()
+        effacer le canva 
+
+        SI ETAT == "intro" ALORS
+            Dessiner le menu d'accueil
+        SINON SI ETAT == "jeu" ALORS 
+            Dessiner les questions
+            Dessiner le score (UI)
+        FIN SI
+
+    FIN FONCTION    
+
+
+## FONCTIONS D'ÉCOUTER DES ÉVÉNEMENTS
+
+FUNCTION onClicCanvas(evenement)
+    Récupérer la position du curseur ( X, Y)
+
+    SI ETAT == "intro" && clic  sur le bouton "Démarrer" ALORS
+        ETAT = "jeu"
+
+    POUR la position de question change d 1 jusqu'à 
+        il n'en restent plus de questions ALORS
+        BOUTON = ALORS
+        Faut calculer la position du bouton dans le canva   
+
+        COLLITION = detecterClicObjet( curseurX, curseurY, bouton);
+        SI COLLITION == true ALORS
+            PREMIERE_QUESTION = LISTE_QUESTIONS[INDEX_QUIZ];
+            
+            Si PREMIERE_QUESTION.reponse == premiereQuestion.choix[i] ALORS
+                AFFICHER message de reussite;
+                Afficher sons de reussite;
+                Augmenter npoints + 1;
+            } SINON {
+                AFFICHER message de defaite; 
+                Afficher sons d'erreur;
+                Diminuer npoints - 1;
+            FIN SI    
+
+            INDEX_QUIZ += 1;
+            SI INDEX_QUIZ >=  question.length ALORS
+                ETAT = "fin"
+            FIN SI
+        FIN SI
+    FIN POUR
+
+FIN FONCTION
+
+
+
+## FONCTIONS D'AFFICHAGE 
+
+
+
+FONCTION dessinerMenu()
+
+    Incrémenter la teinte du bouton (animation arc-en-ciel)
+    SI teinte >= 360 ALORS teinte = 0
+
+        Dessiner le titre "JEU DES PAIRES"
+        Dessiner les instructions
+        Dessiner le bouton démarrer avec la couleur animée
+        Dessiner le texte du bouton
+    FIN SI
+FIN FONCTION
+
+
+FONCTION dessinerUi()
+    Afficher le texte "Score : " + score
+FIN FONCTION
+
+FONCTION dessinerQuestion()
+
+    PREMIERE_QUESTION = LISTE_QUESTIONS[INDEX_QUIZ]
+        Aligner la question et changer le font
+    
+
+    POUR la position ded question dans LISTE_QUESTIONS +1 ALORS
+        ELEMENT_CHOIX = premiereQuestion.choix[i]
+        Aligner la question et changer le font
+
+FIN FONCTION
+
+
+
