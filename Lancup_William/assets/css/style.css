@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Tokyo";
+    src: url("../font/Tokyo.ttf") format("truetype");
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #521e1e;
+}
+
+canvas {
+    border: 10px solid #000000;
+    background-color: #9a69da;
+}
